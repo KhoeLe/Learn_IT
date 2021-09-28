@@ -1,0 +1,64 @@
+
+
+// ** POST ** Register user
+
+POST http://localhost:8000/api/v1/auth/register
+Content-Type: application/json
+
+{
+    "username": "khoe.le.hutech@gmail.com",
+    "password": "Louisle@9991"
+}
+
+################################
+
+// ** POST ** Login user
+POST http://localhost:8000/api/v1/auth/login
+Content-Type: application/json
+
+{
+    "username": "khoe.le.hutech@gmail.com",
+    "password": "Louisle@9991"
+}
+
+
+################################
+
+// ** POST ** POST Story
+POST http://localhost:8000/api/v1/story
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTUwMmQyZTYxMjU0MmFmMDVkNGVkYzkiLCJpYXQiOjE2MzI2NTQ5MjAsImV4cCI6MTYzMjc0MTMyMH0.g_YcIHM-2eXXN6Gj8xRPdx7xwj_cK_wadsVLWDLCGw4
+
+
+{
+    "title": "learn google",
+    "description": "new Story",
+    "url": "google.com"
+}
+
+################################
+
+// ** GET ** GET Story details
+GET http://localhost:8000/api/v1/storyDetails
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTUwMmQyZTYxMjU0MmFmMDVkNGVkYzkiLCJpYXQiOjE2MzI2NDUwNTksImV4cCI6MTYzMjczMTQ1OX0.BoarCY4CisF6RccnHdvEblBazyzI14E6GHTKWWbvqIU
+
+################################
+
+// ** Update ** Update Story details
+PUT http://localhost:8000/api/v1/storyDetails/614b5afab215c4858ddac314
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTRiMDc0NjI4YjIxYjQ4YjBkZGIxZDciLCJpYXQiOjE2MzIzODI5MTcsImV4cCI6MTYzMjQ2OTMxN30.aIupQYfc4ofxstub8oNPzTlCfhyvPYXF-FKxdxwyUJg
+Content-Type: application/json
+
+{
+    "title": "learn google123",
+    "description": "new Story",
+    "url": "google.com"
+}
+
+
+################################
+
+// ** Dlete ** Delete Story details
+DELETE  http://localhost:8000/api/v1/storyDelete/614b5b80d445e2865e3e6809
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTRiMDc0NjI4YjIxYjQ4YjBkZGIxZDciLCJpYXQiOjE2MzIzODI5MTcsImV4cCI6MTYzMjQ2OTMxN30.aIupQYfc4ofxstub8oNPzTlCfhyvPYXF-FKxdxwyUJg
+# Content-Type: application/json
